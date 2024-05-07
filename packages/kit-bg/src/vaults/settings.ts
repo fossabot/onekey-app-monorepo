@@ -8,6 +8,7 @@ import {
   IMPL_LIGHTNING,
   IMPL_LIGHTNING_TESTNET,
   IMPL_LTC,
+  IMPL_NEAR,
   IMPL_TBTC,
   IMPL_TRON,
 } from '@onekeyhq/shared/src/engine/engineConsts';
@@ -57,6 +58,7 @@ export async function getVaultSettings({ networkId }: { networkId: string }) {
     [IMPL_BCH]: () => import('./impls/bch/settings'),
     [IMPL_LTC]: () => import('./impls/ltc/settings'),
     [IMPL_COSMOS]: () => import('./impls/cosmos/settings'),
+    [IMPL_NEAR]: () => import('./impls/near/settings'),
     [IMPL_TRON]: () => import('./impls/tron/settings'),
     [IMPL_LIGHTNING]: () => import('./impls/lightning/settings'),
     [IMPL_LIGHTNING_TESTNET]: () =>
